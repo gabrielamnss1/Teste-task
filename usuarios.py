@@ -52,21 +52,4 @@ def autenticar_usuario(login, senha):
     return None
 
 
-def get_usuario_logado():
-    return USUARIO_LOGADO
-
-def logout():
-    global USUARIO_LOGADO
-    if USUARIO_LOGADO:
-        print(f"Logout de {USUARIO_LOGADO['nome']} realizado com sucesso.")
-        USUARIO_LOGADO = None
-        return True
-    return False
-
-def get_usuario_por_id(user_id):
-    usuarios = _carregar_usuarios()
-    for usuario in usuarios:
-        if usuario['id'] == user_id:
-            return usuario
-    return None
 
